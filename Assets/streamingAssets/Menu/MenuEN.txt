@@ -1,0 +1,13 @@
+New Game
+Options
+Exit
+Back
+Volume
+Typing Speed
+Slowly
+Fast
+Language
+Apply
+Load 
+Load
+Delete

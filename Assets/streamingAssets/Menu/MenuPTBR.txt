@@ -1,0 +1,13 @@
+Novo Jogo
+Opções
+Sair
+Voltar
+Volume
+Velocidade de texto
+Lento
+Rápido
+Linguagem
+Aplicar
+Carregar 
+Carregar
+Deletar

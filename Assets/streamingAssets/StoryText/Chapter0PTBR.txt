@@ -1,0 +1,6 @@
+*Chapter 0 PTBR*
+@j+Ola, Como Voce esta?
+@h+Estou bem, e Voce?
+@j+To bem cara.
+@j+Mas voce não veio ontem porque?
+@?+Ele não veio porque eu não deixei
