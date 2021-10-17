@@ -119,8 +119,16 @@ public class GameMenu : MonoBehaviour
     #region LoadGame
     public void BackLoad()
     {
+        GameObject[] saves = GameObject.FindGameObjectsWithTag("Saves");
+
+        for (int i = 0; i < saves.Length; i++)
+        {
+            Destroy(saves[i]);
+        }
         LoadPanel.SetActive(false);
         MenuPanel.SetActive(true);
+
+        
     }
     #endregion LoadGame
 }

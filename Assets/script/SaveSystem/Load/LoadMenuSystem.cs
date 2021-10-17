@@ -15,11 +15,11 @@ public class LoadMenuSystem : MonoBehaviour
     public Text sceneText;
     List<SavesPath> savesFiles = new List<SavesPath>();
 
-   
+    string SaveName = "";
 
     private void Start()
     {
-        
+              
     }
     public void ShowLoads()
     {
@@ -42,8 +42,13 @@ public class LoadMenuSystem : MonoBehaviour
         }
 
     }
-    
-    public void LoadSave(string SaveName)
+
+    public void SelectedSave(string saveName)
+    {
+        SaveName = saveName;
+    }
+
+    public void LoadSave()
     {
         foreach(SavesPath save in savesFiles)
         {
@@ -51,15 +56,20 @@ public class LoadMenuSystem : MonoBehaviour
             {
                 sceneText.text = save.saveName;
                 string name = save.saveName.Split('.').First();
-              
-                byte[] bytes = File.ReadAllBytes((Application.dataPath + "/Resources/SaveImage/" + name));
-                sceneimage.sprite.texture.LoadImage(bytes);
-                
+
+                sceneimage.sprite = Resources.Load<Sprite>(@"/SaveImage/16 - 10 - 2021 22 - 03 - 28.png") as Sprite;
+
                 SerializationManager.Load(save.savePath);                
             }
         }
     }
-
+    public void DeleteSave()
+    {
+        string path = Application.persistentDataPath + @"/saves/";
+        File.Delete(path + SaveName + @".png");
+        File.Delete(@"Assets/Resources/SaveImage/" + SaveName + @".png");
+        ShowLoads();
+    }
 }
 public class SavesPath
 {
